@@ -1,9 +1,19 @@
 package br.com.dio.banco;
 
-public class Conta implements IConta {
-    private int agencia;
-    private int numero;
-    private double saldo;
+public abstract class Conta implements IConta {
+
+    private static final int AGENCIA_PADRAO = 1;
+
+    private static int SEQUENCIAL = 1;
+
+    protected int agencia;
+    protected int numero;
+    protected double saldo;
+
+    public Conta() {
+        this.agencia = AGENCIA_PADRAO;
+        this.numero = SEQUENCIAL++;
+    }
 
     public int getAgencia() {
         return agencia;
