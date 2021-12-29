@@ -3,10 +3,10 @@ package br.com.dio.banco;
 public class Main {
     public static void main(String[] args) {
         Cliente cliente = new Cliente();
-        cliente.setNome("Dannilo");
+        cliente.setNome("Jonas");
 
         Conta cc = new ContaCorrente(cliente);
-        cc.depositar(100);
+        cc.depositar(70);
 
 
         Conta poupanca = new ContaPoupanca(cliente);
